@@ -139,6 +139,7 @@ In some VsCode versions, the indexing of part of the extensions is missing. In t
 
 ```json
 {
+    "python.languageServer": "Pylance",
     "python.analysis.extraPaths": [
         "${workspaceFolder}/source/rl_training",
         "/<path-to-isaac-lab>/source/isaaclab",
@@ -148,6 +149,14 @@ In some VsCode versions, the indexing of part of the extensions is missing. In t
         "/<path-to-isaac-lab>/source/isaaclab_tasks",
     ]
 }
+```
+
+### Clean USD Caches
+
+Temporary USD files are generated in `/tmp/IsaacLab/usd_{date}_{time}_{random}` during simulation runs. These files can consume significant disk space and can be cleaned by:
+
+```bash
+rm -rf /tmp/IsaacLab/usd_*
 ```
 
 ## Acknowledgements
